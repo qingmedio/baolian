@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+        <meta name="format-detection" content="telephone=no" /> 
+        
+        <title>保联在线</title>
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css" />
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+    </head>
+    <body>   
+	   
+              <div class="bd-search">
+			 
+					  <div style=" margin:0px auto 10px 5px; height:20px; vertical-align:middle; float:left; width:48%">
+                   <a href="javascript:gotoIndex(0);" class="btn-left">
+				<i class="glyphicon glyphicon-chevron-left" style="color:#FFFFFF;"> 
+				 </i></a></div>
+				 <div style="color:#FFFFFF; float:left;  font-weight:bold; font-size:14px;">登录</div>
+        
+                </div> 
+        <div class="logo"></div>
+        <div class="container">
+        	<form class="form-group" name="loginform" id="loginform">
+            	<div class="form-login">
+            	<div class="arr"></div>
+        		<input type="text" class="form-control input-lg" id="staffcode" name="staffCode">
+        		<input type="password" class="form-control input-lg" id="password" name="password">
+        		</div>
+            </form>
+			 <button type="submit" class="btn btn-info btn-lg btn-block" id="submitLogin" name="submitLogin">登&nbsp;&nbsp;录</button>
+			
+            </div>
+        <nav class="navbar navbar-fixed-bottom text-center">
+		<a href="masterReg.html">快速注册</a> |忘记密码？<a href="password.html">找回密码</a>
+		</nav>
+    
+    <!-- 下载最新版对话框 -->
+		<div class="modal" id="downLoadLstVsnModal">
+		  <div class="modal-dialog" style="margin:150px 20px 20px;">
+		    <div class="modal-content">
+		      <div class="modal-header" style="border-color:#18B4ED;">
+		        <h4 class="modal-title">新版本</h4>
+		      </div>
+		      <div class="modal-body">
+		        <div class="input-group clearfix" id="picType" style="width:100%;">                      
+              <p>有新版本2.0：优化图像分辨率;增加巡检计划信息显示。</p>
+            </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary" id="downLoadLstVsn">下载</button>
+            <button type="button" class="btn" id="cancelDownloadLstVsn" style="backgroud-color: gray;">取消</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+    
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- add by majie 添加相关的js文件-->
+		<script src="public/jquery/jquery.js"></script>
+		 <script type="text/javascript" src="js/public.js"></script>
+		<script src="js/login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+        <meta name="format-detection" content="telephone=no" />    
+        <title>保联在线-我的保险</title>
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css" />
+		<script type="text/javascript" src="cordova.js"></script>        
+        <script type="text/javascript" src="public/jquery/jquery.js"></script>
+        <script type="text/javascript" src="js/public.js"></script>
+        <script type="text/javascript" src="js/myOrder.js"></script>
+        <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>  
+    
+        <link href="public/third/mobiscroll/css/mobiscroll.custom-2.6.2.min.css" rel="stylesheet" type="text/css" />
+		<script src="public/third/mobiscroll/mobiscroll.custom-2.6.2.min.js" type="text/javascript"></script>
+        
+    </head>
+    <body> 
+    
+    	<!--巡检日志-->
+    	<div data-role="page" id="allOrder">
+		 <div data-role="header">
+                <div class="bd-search">
+                <a href="javascript:gotoQry(1);" class="btn-left">
+				<i class="glyphicon glyphicon-chevron-left"> 
+				我的保险订单</i></a>       
+                </div>  
+			</div>
+            <nav data-role="header">
+              <h5 class="text-center">
+              	 <div class="tab">
+                 <a class="changepage first select"  href="javascript:initOrderInfo(0)" data-anim="slideInLeft">全部</a>
+                 <a class="changepage last" href="javascript:initOrderInfo(1)" data-anim="slideInRight">待出单</a>
+                 <a class="changepage last" href="javascript:initOrderInfo(2)" data-anim="slideInRight">已出单</a> 
+                 </div>
+              </h5> 
+            </nav>
+            <div data-role="content" class="mpager">
+                <form class="form-search clearfix">
+                  <div class="form-group"> 
+                    <div class="input-group">
+                    <table class="table table-striped"> 
+	        		<tbody id="orderListInfo">
+	        		</tbody>
+                    </table>					
+                       </div>
+                  </div> 
+                </form> 
+            </div> 
+        </div>          
+	 
+    
+        <!--加载遮罩-->
+        <div class="load">
+        	<div class="bg"></div>
+            <div class="tx"></div>
+        </div>
+    </body>
+</html>

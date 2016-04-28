@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+        <meta name="format-detection" content="telephone=no" />         
+        <title>保联在线</title>
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css" />
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+    </head>
+    <body>     
+        <div data-role="page" id="home"> 
+              <div data-role="header" >
+                <div class="bd-search">
+                	
+                	<div style="color:#FFFFFF; float:left;  font-weight:bold; font-size:14px; text-align:center; width:100%;">预约车险</div>
+</div>                    
+                </div> 
+            <div class="container" id="applyInfo" style="display:none;background-color:#FFFFFF;padding:5px auto;">
+        	<form class="form-group" name="masterform" id="masterform">
+            	<div class="form-login">
+            	<div class="arr"></div>
+				<input type="text" value="车主姓名" id="masterName" name="masterName" class="form-control input-lg" onFocus="setFocus(this.id)" >
+        		<input type="text" value="联系电话" id="mobilePhone" name="mobilePhone" class="form-control input-lg" onFocus="setFocus(this.id)">
+        		<input type="text" value="身份证号码" id="certNbr" name="certNbr" class="form-control input-lg" onFocus="setFocus(this.id)" >
+        		<input type="text" value="驾驶证编号" id="licenseCode" name="licenseCode" class="form-control input-lg" onFocus="setFocus(this.id)" >
+        		<input type="text" value="车架号码" id="carFrameCode" name="carFrameCode" class="form-control input-lg" onFocus="setFocus(this.id)" >
+        		<input type="text" value="发动机号码" id="motorCode" name="motorCode" class="form-control input-lg" onFocus="setFocus(this.id)" >
+				<input type="text" value="车牌号码" id="carLicenceCode" name="carLicenceCode" class="form-control input-lg" onFocus="setFocus(this.id)" >
+				<input type="text" value="保险到期时间" id="endDate" name="endDate" class="form-control input-lg" onFocus="setFocus(this.id)" >
+				
+        		</div>
+            </form>
+			 <button type="submit" data-anim="slideInRight" class="btn btn-info ibtn-info" id="submitApply" name="submitApply">提交预约</button>
+            </div> 
+			<div class="container" id="applyOffer"  style="display:none; background-color:#FFFFFF;padding:5px auto;">
+        	 <table class="table table-striped" style="boder:2px" align="center">                   
+                    <tbody id="applyOfferInfo" name="applyOfferInfo">
+					
+                    </tbody>
+                </table>
+			 <button type="submit" data-anim="slideInRight" class="btn btn-info ibtn-info" id="gotoApply" name="gotoApply">重新预约</button>
+			 <button type="submit" data-anim="slideInRight" class="btn btn-info ibtn-info" id="gotoOrder" name="gotoOrder" style="display:none">购&nbsp;&nbsp;买</button>
+            </div> 
+            <nav data-role="footer" class="navbar navbar-default navbar-fixed-bottom nav-bottom">
+            	<div class="container">
+                 <div class="row">
+                    <a href="index.html" class="col-xs-4 text-center selected"><i class="glyphicon glyphicon-home"></i>保联商城</a>
+                    <a href="master.html" class="col-xs-4 text-center"><i class="glyphicon glyphicon-map-marker"></i>预约车险</a>
+                    <a href="userinfo.html" class="col-xs-4 text-center"><i class="glyphicon glyphicon-briefcase"></i>我的</a>
+                  </div>
+                </div>
+            </nav>
+        </div>       
+        </div>
+		
+    
+        <!--加载遮罩-->
+        <div class="load">
+        	<div class="bg"></div>
+            <div class="tx"></div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- add by majie 添加相关的js文件-->
+		<script src="public/jquery/jquery.js"></script>
+		 <script type="text/javascript" src="js/public.js"></script>
+		<script src="js/master.js"></script>
+    </body>
+</html>

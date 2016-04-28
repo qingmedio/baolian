@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+        <meta name="format-detection" content="telephone=no" /> 
+        
+        <title>渠道宝-首页</title>
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css" />
+		<style>
+			@charset "UTF-8";
+				html {
+					font-size:50px;
+					-webkit-tap-highlight-color:transparent;
+					height:100%;
+					min-width:320px;
+					overflow-x:hidden
+				}
+				body {
+					font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+					font-size:.28em;
+					line-height:1;
+					color:#333;
+					background-color:#f0efed
+				}
+				
+				a {
+					color:#06c1ae;
+					text-decoration:none;
+					outline:0
+				}
+				a:focus {
+					outline:thin dotted;
+					outline:5px auto -webkit-focus-ring-color;
+					outline-offset:-2px
+				}
+				a.react,label.react {
+					display:block;
+					color:inherit;
+					height:100%
+				}
+				a.react:active,a.react.react-active,label.react:active {
+					background:rgba(0,0,0,.1)
+				}
+				
+				dl.list {
+					border-top:1px solid #DDD8CE;
+					border-bottom:1px solid #DDD8CE;
+					margin-top:.2rem;
+					margin-bottom:0;
+					background-color:#fff
+				}
+				dl.list dt,dl.list dd {
+					margin:0;
+					border-bottom:1px solid #DDD8CE;
+					overflow:hidden;
+					font-size:inherit;
+					font-weight:400;
+					position:relative
+				}
+				dl.list dt:last-child,dl.list dd:last-of-type {
+					border-bottom:0
+				}
+				dl.list .dd-padding,dl.list dt,dl.list dd>.react {
+					padding:.28rem .2rem
+				}
+				dl.list dd.poi-list-item>.react {
+					padding-bottom:.2rem;
+					padding-top:.2rem
+				}
+				dl.list dt {
+					font-size:.34rem;
+					padding-bottom:.2rem;
+					color:#333
+				}
+				dl.list .db {
+					height:.8rem;
+					line-height:.8rem;
+					font-size:.3rem
+				}
+				dl.list dd dl {
+					margin:0;
+					margin-bottom:-1px;
+					padding-left:.2rem;
+					border:0
+				}
+				dl.list dd dl>.dd-padding,dl.list dd dl dd>.react,dl.list dd dl>dt {
+					padding-left:0
+				}
+				dl.list .db>.react {
+					color:#06c1ae;
+					padding:0 .2rem
+				}
+				dl.list .posi-right-bottom {
+					position:absolute;
+					bottom:.26rem;
+					right:.2rem
+				}
+				dl.list .statusInfo {
+					color:#666;
+					font-size:.24rem
+				}
+				dl.list del {
+					text-decoration:none
+				}
+				dl.list del:before {
+					content:'门市价:'
+				}
+				dl.list-in {
+					margin:0;
+					border-top:0
+				}
+				dl.list:first-child {
+					margin:0;
+					border-top:0
+				}
+				dl.list dd>.input-weak {
+					width:100%;
+					display:block
+				}
+				dl.list dd>.btn {
+					margin-top:-.15rem;
+					margin-bottom:-.15rem
+				}
+				
+				.dealcard,.cinemacard {
+					position:relative;
+					box-sizing:border-box;
+					margin:-.08rem 0
+				}
+				.dealcard .dealcard-new {
+					position:absolute;
+					right:-.2rem;
+					top:-.2rem;
+					padding-right:.08rem;
+					font-size:.24rem;
+					height:.28rem;
+					line-height:.28rem;
+					width:.6rem;
+					background:#06c1ae;
+					color:#fff;
+					text-align:right
+				}
+				.dealcard .dealcard-nobooking {
+					position:absolute;
+					overflow:hidden;
+					width:1rem;
+					height:1rem;
+					z-index:1
+				}
+				
+				.dealcard .dealcard-new:before {
+					position:absolute;
+					content:'';
+					display:block;
+					top:0;
+					left:-.2rem;
+					border:.14rem solid #06c1ae;
+					border-left:.14rem solid transparent
+				}
+				.dealcard-img {
+					position:absolute;
+					width:1.8rem;
+					height:1.64rem;
+					text-align:center;
+					overflow:hidden
+				}
+				.dealcard-img>img {
+					background-size:100%;
+					background-color:#f0efed;
+					border:0
+				}
+				.dealcard .dealcard-block-right {
+					margin-left:2rem;
+					position:relative;
+					height:1.64rem
+				}
+				.dealcard .dealcard-brand,.cinemacard .cinemacard-brand {
+					padding-top:.1rem;
+					margin-bottom:.12rem;
+					font-size:.3rem;
+					font-weight:400;
+					color:#333
+				}
+				.cinemacard .cinemacard-brand {
+					padding-top:0
+				}
+				.dealcard .title,.cinemacard .title {
+					font-size:.24rem;
+					height:.68rem;
+					margin-bottom:.16rem;
+					color:#666;
+					text-overflow:ellipsis;
+					display:-webkit-box;
+					-webkit-line-clamp:2;
+					-webkit-box-orient:vertical;
+					overflow:hidden
+				}
+				.dealcard .price,.cinemacard .price {
+					color:#666;
+					position:relative
+				}
+				.dealcard .price {
+					position:absolute;
+					width:100%;
+					bottom:0
+				}
+				.dealcard .price>span,.dealcard .price>del {
+					vertical-align:sub
+				}
+				.dealcard .price>strong,.cinemacard .price>strong,.dealcard .price .strong,.cinemacard .price .strong {
+					font-size:.38rem;
+					color:#06c1ae
+				}
+				.dealcard .price del,.cinemacard .price del {
+					font-size:.24rem
+				}
+				.dealcard .price>.strong-color,.cinemacard .price>.strong-color {
+					font-size:.26rem;
+					color:#06c1ae
+				}
+				.dealcard .line-right,.cinemacard .price .line-right {
+					position:absolute;
+					top:.04rem;
+					right:0;
+					font-size:.24rem
+				}
+				.dealcard .tag,.poi-dealcard .tag {
+					border:.02rem solid #f90;
+					color:#f90;
+					line-height:1.5;
+					display:inline-block;
+					padding:0 .06rem;
+					font-size:.22rem;
+					border-radius:.06rem
+				}
+				.simpleCard .dealcard .dealcard-block-right {
+					margin-left:.45rem;
+					margin-right:.2rem
+				}
+				.more .dealcard .line-right {
+					display:none
+				}
+				.simpleCard .title {
+					font-size:.3rem;
+					height:.78rem
+				}
+				.dealcard .dealtype-icon {
+					position:absolute;
+					top:.03rem
+				}
+				.dealtype-icon {
+					display:inline-block;
+					background-color:#06c1ae;
+					color:#fff;
+					font-size:.24rem;
+					padding:.05rem;
+					border-radius:.06rem;
+					vertical-align:text-bottom;
+					line-height:1
+				}
+				.dealtype-icon.dealcard-magiccard {
+					background-color:#FF500B
+				}
+				
+
+		</style>
+    </head>
+    <body>    
+    	<div data-role="page" id="home">  
+ <div class="bd-search">
+                <a href="javascript:gotoQry(1);" class="btn-left">
+				<i class="glyphicon glyphicon-chevron-left"> 
+				商品列表</i></a> 
+				<div class="search-group">
+                	  <div  align="center" style="font-weight:bold;color:#FFFFFF; font-size:14px; line-height:30px;">商品列表</div> 
+                	  <!--  <input id="resultSearchTx" data-href="bdsearch" data-anim="slideInRight" class="form-control search changepage" type="text" placeholder="搜索商品"> -->
+                  </div>  
+                </div> 
+                 <div class="bd-search" style="background:#FFFFFF;border-bottom: 2px solid #FFFFFF;">
+                	<div class="search-group" >
+                        <input id="resultSearchTx" data-href="bdsearch" data-anim="slideInRight" class="form-control search changepage" type="text" placeholder="搜一搜"/>
+                    	<!--<div class="input-group-icon group-icon-left"><i class="glyphicon glyphicon-search"></i></div>-->
+					</div>
+                    <a href="#" data-href="qudaoliebiao" data-href-s="mybd" data-anim="slideInRight" class="gray changepage right-icon"><i class="glyphicon glyphicon-search"></i></a>
+                </div> 
+            <div data-role="content" class="mpager">
+                <table class="table table-striped" style="boder:2px">                   
+                    <tbody id="productInfo" name="productInfo">
+						<div id="guessLike" class="guess-like">
+							<dl class="list" style="opacity: 1;">
+								<dd>
+									<dl class="list" style="opacity: 1;">
+									
+									</dl>
+								</dd>
+							</dl>
+						</div>
+                    </tbody>
+                </table>
+            </div>
+		 
+            <nav data-role="footer" class="navbar navbar-default navbar-fixed-bottom nav-bottom">
+            	<div class="container">
+                 <div class="row">
+                    <a href="index.html" class="col-xs-4 text-center "><i class="glyphicon glyphicon-home"></i>商城</a>
+                    <a href="cart.html" class="col-xs-4 text-center" selected><i class="glyphicon glyphicon-map-marker"></i>购物车</a>
+                    <a href="userinfo.html" class="col-xs-4 text-center"><i class="glyphicon glyphicon-briefcase"></i>我的</a>
+                  </div>
+                </div>
+            </nav>
+        </div> 
+      
+        <!--加载遮罩-->
+        <div class="load">
+        	<div class="bg"></div>
+            <div class="tx"></div>
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="public/jquery/jquery.js"></script>
+		<!-- add by majie 添加相关的js文件-->
+		 <script type="text/javascript" src="js/public.js"></script>
+		<script src="js/productList.js"></script>
+        <script>
+		</script>
+    </body>
+</html>

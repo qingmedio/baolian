@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+        <meta name="format-detection" content="telephone=no" /> 
+        
+        <title>渠道宝-首页</title>
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css" />
+		<style>
+			div, span, a, header {
+			  -webkit-tap-highlight-color: rgba(255,255,255,0);
+			}
+			ul, li {
+			  margin: 0;
+			  padding: 0;
+			  list-style-type: none;
+			}
+			.shp-cart-list li {
+			  border-width: 0 0 1px 0;
+			  -webkit-border-image: url("data:image/gif;base64,R0lGODlhAgAEAJEDAMfGy8jHy8jGy////yH/C1hNUCBEYXRhWE1Q…ZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAADACwAAAAAAgAEAAACBAyGI1IAOw==") 2 0 stretch;
+			}
+			.items {
+			  text-align: left;
+			  clear: both;
+			  background-color: #fff;
+			}
+			.items .check-wrapper {
+			  margin-top: 35px;
+			  /*margin-left: -30px;*/
+			}
+			input[type="hidden" i], input[type="image" i], input[type="file" i] {
+			  -webkit-appearance: initial;
+			  padding: initial;
+			  background-color: initial;
+			  border: initial;
+			}
+			
+			.check-wrapper .cart-checkbox {
+			  width: 20px;
+			  height: 20px;
+			}
+			.cart-checkbox.checked {
+			  background-position: -25px 0;
+			}
+			.check-wrapper {
+			  height: 20px;
+			  width: 20px;
+			  /*margin-left: -29px;*/
+			  margin-top: 19px;
+			  display: block;
+			  position: absolute;
+			}
+			.eles-flex {
+			  display: -webkit-box;
+			  display: -webkit-flex;
+			  display: -ms-flexbox;
+			  display: flex;
+			  -webkit-flex-wrap: wrap;
+			  -ms-flex-wrap: wrap;
+			  flex-wrap: wrap;
+			}
+			.cart-checkbox {
+			  display: block;
+			  width: 20px;
+			  height: 20px;
+			  margin: 0 auto;
+			  background: url(img/shopping.cart.spirits.icns1.png) no-repeat 0 1px;
+			  background-size: 50px 150px;
+			}
+			.shop-cart-display.shp-cart-item-core {
+			  position: relative;
+			  margin: 10px 20px;
+			  box-sizing: border-box;
+			}
+			.shop-cart-display .cart-product-cell-1 {
+			  width: auto;
+			  height: auto;
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			}
+			.shop-cart-display .cart-product-cell-1 .cart-photo-thumb {
+			  width: 88px;
+			  height: 88px;
+			}
+			.shop-cart-display .cart-product-cell-1:after, .additional-item-thumb:after {
+			  position: absolute;
+			  top: -0.5px;
+			  left: -0.5px;
+			  width: 200%;
+			  height: 200%;
+			  content: '';
+			  border: 1px solid #e3e5e9;
+			  border-radius: 6px;
+			  -webkit-border-radius: 6px;
+			  transform: scale(.5);
+			  -webkit-transform: scale(.5);
+			  -webkit-transform: scale(.5);
+			  transform-origin: top left;
+			  -webkit-transform-origin: top left;
+			}
+			.shop-cart-display .cart-product-cell-2, .edit-pro-mode {
+			  padding-left: 100px;
+			  padding-right: 10px;
+			  width: 100%;
+			  box-sizing: border-box;
+			}
+			.shop-cart-display .cart-product-name {
+			  margin-bottom: 3px;
+			  height: 32px;
+			  line-height: 16px;
+			  font-size: 13px;
+			  color: #252525;
+			}
+			.cart-product-name a {
+			  color: #555;
+			  display: inline-block;
+			  height: 100%;
+			}
+			.shop-cart-display .cart-product-name a span {
+			  height: 32px;
+			  max-height: 32px;
+			  font-size: 13px;
+			  line-height: 16px;
+			  vertical-align: middle;
+			  display: -webkit-box;
+			  -webkit-box-pack: center;
+			  -webkit-box-align: start;
+			  color: #232326;
+			}
+			.cart-product-prop {
+			  height: 14px;
+			  line-height: 14px;
+			  margin-bottom: 6px;
+			  font-size: 11px;
+			  color: #81838e;
+			  white-space: nowrap;
+			}
+			.cart-product-prop .prop1, .cart-product-prop .prop2 {
+			  display: block;
+			  -webkit-box-flex: 1;
+			  -webkit-flex: 1;
+			  -ms-flex: 1;
+			  flex: 1;
+			  -webkit-flex-basis: 0;
+			  -ms-flex-preferred-size: 0;
+			  flex-basis: 0;
+			  overflow: hidden;
+			  text-overflow: ellipsis;
+			  white-space: nowrap;
+			}
+			.cart-product-prop .prop1 {
+			  padding-right: 2px;
+			}
+			.shop-cart-display .cart-product-cell-3 {
+			  width: auto;
+			  position: static;
+			  background: rgba(255,255,255,1);
+			  text-align: left;
+			  margin: 0 0 8px 0;
+			  height: 14px;
+			  font-size: 13px;
+			  line-height: 1;
+			}
+			.shop-cart-display .shp-cart-item-price {
+			  display: inline-block;
+			  height: 100%;
+			  line-height: 14px;
+			  font-size: 13px;
+			  color: #f23030;
+			}
+			.shp-cart-item-price strong {
+			  font-size: 16px;
+			  font-weight: normal;
+			  margin-left: 3px;
+			}
+			.cart-product-cell-5 {
+			  position: relative;
+			  height: 13px;
+			  line-height: 13px;
+			  font-size: 0;
+			}
+			span.num-cont-show {
+			  display: inline-block;
+			  line-height: 13px;
+			  color: #81838e;
+			}
+			.cart-product-cell-5>span {
+			  font-size: 14px;
+			  display: inline-block;
+			  line-height: 13px;
+			  color: #81838e;
+			}
+			span.num-cont-show:before {
+			  content: "×";
+			}
+			.cart-product-cell-5 .right-boundary {
+			  height: 13px;
+			  margin-top: 13px;
+			}
+			.right-boundary {
+			  display: inline-block;
+			  width: 1px;
+			  height: 13px;
+			  background-color: #e3e5e9;
+			  vertical-align: top;
+			}
+			.shop-btn-com a.cart-new-btn:last-child {
+			  padding-right: 0;
+			}
+			.shop-btn-com .cart-new-btn:last-child {
+			  color: #232326;
+			}
+			.cart-product-cell-5 .cart-new-btn {
+			  line-height: 40px;
+			}
+			.cart-product-cell-5 .shop-btn-com {
+			  position: absolute;
+			  bottom: 0;
+			  right: 0;
+			  height: 200%;
+			  font-size: 0;
+			}
+			.shop-btn-com {
+			  box-sizing: border-box;
+			}
+			.cart-product-cell-5 .right-boundary {
+			  height: 13px;
+			  margin-top: 13px;
+			}
+			.right-boundary {
+			  display: inline-block;
+			  width: 1px;
+			  height: 13px;
+			  background-color: #e3e5e9;
+			  vertical-align: top;
+			}
+			.shop-btn-com a.cart-new-btn:last-child {
+			  padding-right: 0;
+			}
+			.shop-btn-com .cart-new-btn:last-child {
+			  color: #232326;
+			}
+			cart.actionmedia="all"
+			.cart-product-cell-5 .cart-new-btn {
+			  line-height: 40px;
+			}
+			.cart-new-btn {
+			  font-size: 12px;
+			  display: inline-block;
+			  height: 100%;
+			  color: #81838e;
+			  padding: 0 10px;
+			  box-sizing: border-box;
+			}
+		</style>
+    </head>
+    <body>    
+    	<div data-role="page" id="home">                           
+            <div data-role="content" class="mpager">
+				<ul class="shp-cart-list">
+					<li id="product1304924" name="productGroup-1">
+						<div class="items">
+								<input type="hidden" name="editPara" class="editPara" value="{&quot;isPure&quot;:true,&quot;shopId&quot;:&quot;-1&quot;,&quot;skuId&quot;:&quot;1304924&quot;,&quot;suitId&quot;:&quot;&quot;,&quot;suitNum&quot;:&quot;&quot;,&quot;sType&quot;:&quot;&quot;,&quot;skuNum&quot;:&quot;1&quot;,&quot;venderId&quot;:&quot;8888&quot;,&quot;mainSkuId&quot;:&quot;&quot;,&quot;mainSkuNum&quot;:&quot;&quot;,&quot;limitSkuNum&quot;:&quot;200&quot;,&quot;remainNumInt&quot;:&quot;-1&quot;,&quot;canExtendedWarrenty&quot;: false}">
+						<div class="check-wrapper">
+							<span id="checkIcon1304924" data-sku="1304924@@1" class="cart-checkbox group-8888 checked" onclick="changeSelected('8888',1304924,1)"></span>
+						</div>
+						<div class="shp-cart-item-core shop-cart-display  ">
+							<a class="cart-product-cell-1" href="javascript:beWareDetail('1304924')">
+								<img class="cart-photo-thumb" alt="" src="http://img10.360buyimg.com/n7/jfs/t460/190/1155745795/157818/42c53957/54b4d1f4N6771d851.jpg!q70.jpg" onerror="//misc.360buyimg.com/lib/skin/e/i/error-jd.gif" ks_mark="y">
+															</a>
+							
+						<div class="cart-product-cell-2">
+								<div class="cart-product-name">
+									<a href="javascript:beWareDetail('1304924')"><span>长城（GreatWall ) 红酒 特酿3年解百纳干红葡萄酒 整箱装 750ml*6瓶</span></a></div>                                  <div class="cart-product-prop eles-flex">
+																				<span class="prop1">颜色:特酿3年整箱装</span>
+																	<span class="prop2">尺码:1</span>
+									</div>
+								
+
+								<div class="cart-product-cell-3">
+									<span class="shp-cart-item-price" id="price1304924">￥<strong>158</strong>.00
+									</span>
+								</div>
+								<!-- price move to here end -->
+
+									<div class="cart-product-cell-5">
+										<span class="num-cont-show">1</span>
+										<div class="shop-btn-com">
+											<div class="right-boundary"></div>
+											<a class="cart-new-btn edit-mode-in" href="javascript:void(0);">编辑</a>
+										</div>
+									</div>
+							</div></div>
+						<!-- 比加入时降价信息 begin-->
+										<!-- 比加入时降价信息 end-->
+
+										
+								</div>
+					</li>
+				</ul>
+				<!--
+                <table class="table table-striped" style="boder:2px">                   
+                    <tbody id="cartList" name="cartList">
+                    </tbody>
+                </table>
+				-->
+            </div>
+			<div data-role="content" class="container" style="display:none;text-align:center;" id="nocart" name="nocart"> 
+                 <img src="img/nocart.png">
+				 </img> 
+				 <h5 class="text-center">您的购物车是空的呢，赶快行动哦</h5> 
+				 <button type="submit" class="btn btn-info ibtn-info" id="btnGotoIndex" name="btnGotoIndex">去逛逛</button>           
+			</div>
+			
+            <nav data-role="footer" class="navbar navbar-default navbar-fixed-bottom nav-bottom">
+            	<div class="container">
+                 <div class="row">
+                    <a href="index.html" class="col-xs-4 text-center"><i class="glyphicon glyphicon-home"></i>商城</a>
+                    <a href="cart.html" class="col-xs-4 text-center" selected><i class="glyphicon glyphicon-map-marker"></i>购物车</a>
+                    <a href="userinfo.html" class="col-xs-4 text-center"><i class="glyphicon glyphicon-briefcase"></i>我的</a>
+                  </div>
+                </div>
+            </nav>
+        </div> 
+      
+        <!--加载遮罩
+        <div class="load">
+        	<div class="bg"></div>
+            <div class="tx"></div>
+        </div>-->
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="public/jquery/jquery.js"></script>
+		<!-- add by majie 添加相关的js文件-->
+		 <script type="text/javascript" src="js/public.js"></script>
+		<script src="js/cart.js"></script>
+        <script>
+		</script>
+    </body>
+</html>

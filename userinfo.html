@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+        <meta name="format-detection" content="telephone=no" />         
+        <title>保联在线-首页</title>
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css" />
+        <style type="text/css">
+ 
+        </style>
+</head>
+    <body>    <div data-role="header" >
+                <div class="bd-search">
+                	<a href="#" data-href="producttype" data-href-s="mybd" data-anim="slideInRight" class="gray changepage right-icon"></a>
+                	<div class="search-group">
+                	  <div  align="center" style="font-weight:bold;color:#FFFFFF; font-size:14px; line-height:30px;">个人中心</div> 
+                	  <!--  <input id="resultSearchTx" data-href="bdsearch" data-anim="slideInRight" class="form-control search changepage" type="text" placeholder="搜索商品"> -->
+                  </div>     
+				               
+                </div> 
+				<div class="grzx">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td height="105" width="120" align="center">&nbsp;</td>
+    <td  width="120">&nbsp; </td>
+    <td  width="120">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="25">&nbsp;</td>
+    <td  align="center" id="tdUserInfo"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td  height="70"  align="center" valign="bottom" style=" padding-right:20px; color:#FFFFFF;" ><a href="myOrder.html?type=1" style="text-decoration:none; color:#FFFFFF;">待付款</a></td>
+    <td  align="center" valign="bottom"><a href="myOrder.html?type=2" style="text-decoration:none; color:#FFFFFF; ">待收货</a></td>
+    <td  align="center" valign="bottom" style=" padding-left:20px;"><a href="index.html" style="text-decoration:none; color:#FFFFFF;">售后</a></td>
+  </tr>
+</table>
+				</div>
+				<div data-role="page" id="home">                  	 	  
+            <div data-role="content"  style="width:100%">
+<a href="javascript:gotoMyInfo('point')" class="list-group-item"><img src="img/icon_10.png" width="26" height="26" border="0" style="margin-bottom:5px;margin-right:5px;"/>我的积分</a>
+<a href="javascript:gotoMyInfo('order')" class="list-group-item"><img src="img/icon_12.png" width="26" height="26" border="0" style="margin-bottom:5px;margin-right:5px;"/>我的商品</a>
+<a href="javascript:gotoMyInfo('insur')" class="list-group-item"><img src="img/icon_12.png" width="26" height="26" border="0" style="margin-bottom:5px;margin-right:5px;"/>我的保险</a>
+<a href="javascript:gotoMyInfo('address')" class="list-group-item"><img src="img/icon_06.png" width="26" height="26" border="0" style="margin-bottom:5px;margin-right:5px;"/>收货地址</a>
+<a href="javascript:gotoMyInfo('account')" class="list-group-item"><img src="img/icon_08.png" width="26" height="26" border="0" style="margin-bottom:5px;margin-right:5px;"/>账户信息</a>
+            <nav data-role="footer" class="navbar navbar-default navbar-fixed-bottom nav-bottom">
+            	<div class="container">
+                 <div class="row">
+                    <a href="index.html" class="col-xs-4 text-center selected"><i class="glyphicon glyphicon-home"></i>保联商城</a>
+                    <a href="master.html" class="col-xs-4 text-center"><i class="glyphicon glyphicon-map-marker"></i>预约车险</a>
+                    <a href="userinfo.html" class="col-xs-4 text-center"><i class="glyphicon glyphicon-briefcase"></i>我的</a>                  </div>
+                </div>
+            </nav>
+    </div> 
+        <!--加载遮罩
+        <div class="load">
+        	<div class="bg"></div>
+            <div class="tx"></div>
+        </div>-->
+        
+ <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="public/jquery/jquery.js"></script>
+		<!-- add by majie 添加相关的js文件-->
+		 <script type="text/javascript" src="js/public.js"></script>
+		<script src="js/userinfo.js"></script>
+        <script>
+		</script>
+    </body>
+</html>

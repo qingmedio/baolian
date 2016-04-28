@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+        <meta name="format-detection" content="telephone=no" /> 
+        
+        <title>保联在线</title>
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css" />
+    </head>
+    <body>    
+    	<div data-role="page" id="addressPage" style="display:none"> 		
+              <div data-role="header">
+                <div class="bd-search">
+                <a href="javascript:gotoQry(1);" class="btn-left">
+				<i class="glyphicon glyphicon-chevron-left"> 
+				收货地址</i></a>        	
+                	                   
+                </div> 
+			    <div data-role="content" class="mpager" id="addressAll">
+                <table class="table"  style="boder:2px; background:#FFFFFF; padding:10px;">                   
+                    <tbody id="addressInfo" name="addressInfo">
+					
+                    </tbody>
+                </table>
+                </div>
+			   <div data-role="content" class="mpager" id="noAddress">
+                <table class="table table-striped" style="boder:2px">                   
+                    <tbody id="noAddressInfo" name="noAddressInfo">
+					  <tr><td>您还没有创建过收货地址</td></tr>
+					  <tr><td></td></tr>
+                    </tbody>
+                </table>
+               </div>
+			   <div>
+			   <button type="submit" class="btn btn-info btn-lg btn-block" id="gotoAdd" name="gotoAdd">添加收货地址</button>
+			   </div>
+				</div>
+		</div>
+		<div data-role="page" id="addressDetailPage" style="display:none"> 
+		
+              <div data-role="header" >
+                <div class="bd-search">
+                <a href="javascript:gotoQry(0);" class="btn-left">
+				<i class="glyphicon glyphicon-chevron-left" id="addPageTitle"> 
+				新增收货地址</i></a>    
+                </div> 
+				<div data-role="content" class="mpager">
+                <table class="table" style="boder:2px;background:#FFFFFF;">                   
+                    <tbody id="addressInfo" name="addressInfo">
+					  <tr><td>收货人:</td><td><input type="text" hidden id="addressId"/>
+					  <input type="text" id="receiverName"  class="textcss"/><label id="lReceiver" style="display:none;font-color:red">*必填</label></td></tr>
+					  <tr><td>手机号码：</td><td><input type="text" id="mobilePhone"  class="textcss"/>      <label id="lPhone" >*必填</label></td></tr>
+					  <tr><td>所在省:</td><td><select name="privinceName" id="privinceName"  class="textcss"/><label id="lPrivince">*必填</label></td></tr>
+					  <tr><td>市</td><td><select name="countyName" id="countyName"  class="textcss"/><label id="lCounty">*必填</label></td></tr>
+					  <tr><td>区域</td><td><select name="cityName" id="cityName"  class="textcss"/><label id="lCity">*必填</label></td></tr>
+					  <tr><td>地址</td><td><input type="text" id="address"  class="textcss"/><label id="lAddress">*必填</label></td></tr>
+					  <tr><td><input type="checkbox" id="isPriority" checked  class="textcss"/>默认地址
+					   </td><td><button type="submit" class="btn btn-info ibtn-info" id="addAddress" name="addAddress">添加</button>
+					   <button type="submit" class="btn btn-info ibtn-info" style="display:none" id="delAddress" name="delAddress">删除</button></td></td></tr>
+					</tbody>
+                </table>
+            </div>
+				</div>
+				</div>
+        <!--加载遮罩-->
+        <div class="load">
+        	<div class="bg"></div>
+            <div class="tx"></div>
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="public/jquery/jquery.js"></script>
+		<!-- add by majie 添加相关的js文件-->
+		 <script type="text/javascript" src="js/public.js"></script>
+		<script src="js/address.js"></script>
+<script language="javascript" src="js/PCASClass.js"></script> 
+        <script language="javascript" defer>
+new PCAS("privinceName","countyName","cityName");
+</script>
+    </body>
+</html>

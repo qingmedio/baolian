@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+        <meta name="format-detection" content="telephone=no" />         
+        <title>保联在线-用户资料</title>
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css" />
+        <style type="text/css">
+ 
+        </style>
+</head>
+    <body>    <div data-role="page"  id="userInfo"> 
+	                <div class="bd-search">
+                <a href="javascript:gotoQry(1);" class="btn-left">
+				<i class="glyphicon glyphicon-chevron-left"> 
+				我的个人资料</i></a>          
+                </div>  
+				<div data-role="page" id="home">                  	 	  
+            <div data-role="content"  style="width:100%">
+<a href="#" class="list-group-item"><img src="img/icon_10.png" width="26" height="26" border="0" style="margin-bottom:5px;margin-right:5px;"/>
+<label id="lMobile">手机号码：</label></a>
+<a href="javascript:gotoQry('2')" class="list-group-item"><img src="img/icon_12.png" width="26" height="26" border="0" style="margin-bottom:5px;margin-right:5px;"/>
+<label id="lUserCode">用户名：</label></a>
+<a href="javascript:gotoQry('2')" class="list-group-item"><img src="img/icon_06.png" width="26" height="26" border="0" style="margin-bottom:5px;margin-right:5px;"/>修改密码</a>
+ <a href="javascript:gotoQry('3')" class="list-group-item"><img src="img/icon_06.png" width="26" height="26" border="0" style="margin-bottom:5px;margin-right:5px;"/>退出</a>
+       </div> 
+			</div></div>
+			<div data-role="page" id="updateUserInfo" style="display:none"> 		
+              <div data-role="header" >
+                <div class="bd-search">
+                <a href="javascript:gotoQry(0);" class="btn-left">
+				<i class="glyphicon glyphicon-chevron-left" id="addPageTitle"> 
+				修改账户资料</i></a>         	
+                	                   
+                </div> 
+				<div data-role="content" class="mpager">
+                <table class="table table-striped" style="boder:2px">                   
+                    <tbody id="userInfo" name="userInfo">
+					  <tr><td>用户名:</td><td> 
+					  <input type="text" id="userCode"/><label id="lAnt1"  style="display:none">*必填</label> </td></tr>
+					  <tr><td>手机号码：</td><td><input type="text" id="mobilePhone" disabled="true"/></td></tr>
+					  <tr><td>修改前密码</td><td><input type="password" id="oldPass"/><label id="lAnt2"  style="display:none">*必填</label> </td></tr>
+					  <tr><td>新密码</td><td><input type="password" id="newPass1"/></td></tr>
+					  <tr><td>再次输入新密码</td><td><input type="password" id="newPass2"/> <label id="lAnt3" style="display:none">两次密码不一致</label> </td></tr>
+					   <tr><td></td><td><button type="submit" class="btn btn-info ibtn-info" id="updateUser" name="updateUser">提交</button></td></tr>
+                  
+					</tbody>
+                </table>
+            </div>
+				</div>
+				</div>
+        <!--加载遮罩
+        <div class="load">
+        	<div class="bg"></div>
+            <div class="tx"></div>
+        </div>
+        -->
+ <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="public/jquery/jquery.js"></script>
+		<!-- add by majie 添加相关的js文件-->
+		 <script type="text/javascript" src="js/public.js"></script>
+		<script src="js/myUser.js"></script>
+        <script>
+		</script>
+    </body>
+</html>

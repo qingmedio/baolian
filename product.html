@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+        <meta name="format-detection" content="telephone=no" /> 
+        
+        <title>渠道宝-首页</title>
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css" />
+    </head>
+    <body>    
+    	<div data-role="page" id="home">                           
+            <div data-role="content" class="mpager">
+                <table class="table table-striped" style="boder:2px">                   
+                    <tbody id="productInfo" name="productInfo">
+                    </tbody>
+                </table>
+            </div>
+			  <div data-role="content" class="mpager" style="displan:none">
+			  <li>
+                 <img src="img/nocart.png"></img> </li>
+				 <li>
+				 <h5 class="text-center">您的购物车是空的呢，赶快行动哦</h5></li>
+				 <li>
+				 <button type="submit" class="btn btn-info btn-lg btn-block" id="btnGotoIndex" name="btnGotoIndex">去逛逛</button>         </li>
+    </div>
+		 
+            <nav data-role="footer" class="navbar navbar-default navbar-fixed-bottom nav-bottom">
+            	<div class="container">
+                 <div class="row">
+                    <a href="index.html" class="col-xs-4 text-center "><i class="glyphicon glyphicon-home"></i>商城</a>
+                    <a href="cart.html" class="col-xs-4 text-center" selected><i class="glyphicon glyphicon-map-marker"></i>购物车</a>
+                    <a href="userinfo.html" class="col-xs-4 text-center"><i class="glyphicon glyphicon-briefcase"></i>我的</a>
+                  </div>
+                </div>
+            </nav>
+        </div> 
+      
+        <!--加载遮罩-->
+        <div class="load">
+        	<div class="bg"></div>
+            <div class="tx"></div>
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="public/jquery/jquery.js"></script>
+		<!-- add by majie 添加相关的js文件-->
+		 <script type="text/javascript" src="js/public.js"></script>
+		<script src="js/cart.js"></script>
+        <script>
+		</script>
+    </body>
+</html>
